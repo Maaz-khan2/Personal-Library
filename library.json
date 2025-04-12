@@ -7,7 +7,7 @@
   "read_status":"false"
   "added_status";"2025-04-12 "
  }
-  {
+ {
    "Title":"Python Automation Programming"
   "Author":"Dean Jones"
   "Publication_year":"2020"
@@ -15,20 +15,20 @@
   "read_status":"true"
   "added_status";"2025-04-02 "
   }
-    {
+  {
    "Title":"Fluent Python"
-  "Author":"marnus Harris"
+  "Author":"Ramalo"
   "Publication_year":"2016"
   "genre":"programming"
   "read_status":"false"
   "added_status";"2025-03-16 "
   }
-    {
-   "Title":"Python "
-  "Author":"Dean Jones"
-  "Publication_year":"2020"
+  {
+   "Title":"Effective Python"
+  "Author":"Sam Konstas"
+  "Publication_year":"2013"
   "genre":"programming"
-  "read_status":"true"
-  "added_status";"2025-04-02 "
+  "read_status":"False"
+  "added_status";"2025-02-06 "
   }   
 ]
