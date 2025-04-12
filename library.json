@@ -1,1 +1,34 @@
-
+[
+ {
+  "Title":"Python crash course"
+  "Author":"Eric Mattes"
+  "Publication_year":"2019"
+  "genre":"programming"
+  "read_status":"false"
+  "added_status";"2025-04-12 "
+ }
+  {
+   "Title":"Python Automation Programming"
+  "Author":"Dean Jones"
+  "Publication_year":"2020"
+  "genre":"programming"
+  "read_status":"true"
+  "added_status";"2025-04-02 "
+  }
+    {
+   "Title":"Fluent Python"
+  "Author":"marnus Harris"
+  "Publication_year":"2016"
+  "genre":"programming"
+  "read_status":"false"
+  "added_status";"2025-03-16 "
+  }
+    {
+   "Title":"Python "
+  "Author":"Dean Jones"
+  "Publication_year":"2020"
+  "genre":"programming"
+  "read_status":"true"
+  "added_status";"2025-04-02 "
+  }   
+]
