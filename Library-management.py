@@ -366,8 +366,6 @@ else:
    cols = st.columns(2)
    for i , book in enumerate(st.session_state.library):
        with cols[i % 2]:
-
-     if all(k in book for k in ['author', 'Publication_year', 'genre', 'read_status']):
          st.markdown(f"""
         <div class="book-card">
         <p>Author:{book['author']}</p>    
