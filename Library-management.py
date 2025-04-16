@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd 
 import json
 import os
-import datetime as datetime
+from datetime import datetime 
 import time
 import random
 # import plotly.express as px
@@ -323,10 +323,18 @@ with st.form('add_book_form'):
      with col1:
          title = st.text_input('Book title' , max_chars=100),
          author = st.text_input('Author' , max_chars=100)
-         Publication_year = st.text_input('Publication_year' , min_value=1000 , max_value=datetime.now().year, step=1 , value=2023)
+     
+
+Publication_year = st.number_input(
+    'Publication Year',  # Fixed label (no underscore for better readability)
+    min_value=1000,  # ✅ Valid for number_input
+    max_value=datetime.now().year,  # ✅ Valid for number_input
+    step=1,  # ✅ Valid for number_input
+    value=2023  # ✅ Valid for number_input
+),
 
     
-     with col2:
+with col2:
          genre = st.selectbox('Genre' ,
              
              ['Friction' , 'non-friction' , 'science' , 'technology' , 'Fantasy' , 'Romance' , 'poetry' , 'self-help', 'Art' , 'Religion' , 'History']
