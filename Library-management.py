@@ -393,7 +393,7 @@ else:
 
 
 if "remove_book" not in st.session_state:
-    st.session_state.remove_book == False  # or appropriate default.
+    st.session_state.remove_book = False  # or appropriate default.
     st.session_state.remove_book
 elif st.session_state.current_view == 'search':
    st.markdown("<h4 class='sub-header'>Search Book</h4>",unsafe_allow_html=True)    
