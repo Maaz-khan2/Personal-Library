@@ -296,7 +296,7 @@ if lottie_book:
 
 
 nav_option = st.sidebar.radio(
-       "choose an options:"
+       "choose an options:",
        ['view library' , 'add book' , 'search book' , 'library statistics']
 )
 
