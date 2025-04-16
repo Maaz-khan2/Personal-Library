@@ -365,7 +365,6 @@ else:
        with cols[i % 2]:
            st.markdown(f"""
               <div class="book-card">
-              <h3>{book['title']}</h3>
               <p>Author:{book['author']}</p>    
               <p>Publication_year:{book['Publication_year']}</p>
               <p>genre:{book['genre']}</p>  
