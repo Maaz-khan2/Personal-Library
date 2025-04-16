@@ -391,9 +391,9 @@ else:
         save_library()
         st.rerun()
 
-if st.session_state.remove_book:
+if st.session_state.remove_book == False:
    st.markdown("<div class='success-message'>Book is successfully remove</div>",unsafe_allow_html=True)
-   st.session_state.remove_book = False
+#    st.session_state.remove_book = False
 elif st.session_state.current_view == 'search':
    st.markdown("<h4 class='sub-header'>Search Book</h4>",unsafe_allow_html=True)    
 
