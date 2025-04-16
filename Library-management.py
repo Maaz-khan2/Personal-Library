@@ -130,6 +130,9 @@ def save_library():
 
 # add a book and read
 def add_book(Title, Author, Publication_year, genres, read_status):
+
+       if 'library' not in st.session_state:
+        st.session_state.library = []
     book = {
         'Title': Title,
         'Author': Author,
