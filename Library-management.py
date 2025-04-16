@@ -366,15 +366,18 @@ else:
    cols = st.columns(2)
    for i , book in enumerate(st.session_state.library):
        with cols[i % 2]:
-           st.markdown(f"""
-              <div class="book-card">
-              <p>Author:{book['author']}</p>    
-              <p>Publication_year:{book['Publication_year']}</p>
-              <p>genre:{book['genre']}</p>  
-              <p><span class={'read-badge' if book['read_status']  else 'unread-badge'}>
-              {"Read" if book['read_status'] else "unread"}</span></p>  
-  </div>
-""" , unsafe_allow_html=True) 
+
+     if all(k in book for k in ['author', 'Publication_year', 'genre', 'read_status']):
+         st.markdown(f"""
+        <div class="book-card">
+        <p>Author:{book['author']}</p>    
+        <p>Publication_year:{book['Publication_year']}</p>
+        <p>genre:{book['genre']}</p>  
+        <p><span class={'read-badge' if book['read_status']  else 'unread-badge'}>
+        {"Read" if book['read_status'] else "unread"}</span></p>  
+        </div>
+    """, unsafe_allow_html=True)
+
 
 
    col1 , col2 = st.columns(2)
