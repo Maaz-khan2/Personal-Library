@@ -368,7 +368,7 @@ else:
        with cols[i % 2]:
          st.markdown(f"""
         <div class="book-card">
-        <p>Author:{book['Author']}</p>    
+        <p>Authors:{book['Authors']}</p>    
         <p>Publication_year:{book['Publication_year']}</p>
         <p>genre:{book['genre']}</p>  
         <p><span class={'read-badge' if book['read_status']  else 'unread-badge'}>
