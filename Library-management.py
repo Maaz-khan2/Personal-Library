@@ -129,17 +129,17 @@ def save_library():
                return False 
 
 # add a book and read
-def add_book(Title, Author, Publication_year, genres, read_status):
-
-       if 'library' not in st.session_state:
+def add_book(title, author, Publication_year, genre, read_bool):
+    # Initialize library if not exists
+    if 'library' not in st.session_state:
         st.session_state.library = []
-    book = {
-        'Title': Title,
-        'Author': Author,
-        'Publication_year': Publication_year,
-        'genres': genres,
-        'read_status': read_status,
-        'added_date': datetime.now().strftime("%Y-%m-%d %H-%m-%s")
+    
+    book = {  
+        'title': title,
+        'author': author,
+        'year': Publication_year,
+        'genre': genre,
+        'read': read_bool
     }
     st.session_state.library.append(book)
     save_library()
