@@ -131,12 +131,13 @@ def save_library():
 # add a book and read
 def add_book(title, author, Publication_year, genre, read_status):
     
-    book = {  # ✅ Correct 4-space indentation
+    book = {  
         'title': title,
         'author': author,
-        'year': Publication_year,
+        'Publication_year': Publication_year,
         'genre': genre,
-        'read_status': read_status
+        'read_status': read_status,
+        "added_date" : datetime.now().strftime("%Y-%m-%d %H:%M:%S")  
     }
     st.session_state.library.append(book)
     save_library()
