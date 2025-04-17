@@ -7,7 +7,7 @@ import time
 import random
 # import plotly.express as px
 # import plotly.grap_object as go
-from streamlit_lottie import st_lottie
+# from streamlit_lottie import st_lottie
 import  requests 
 
 # set page configration
@@ -129,17 +129,14 @@ def save_library():
                return False 
 
 # add a book and read
-def add_book(title, author, Publication_year, genre, read_bool):
-    # Initialize library if not exists
-    if 'library' not in st.session_state:
-        st.session_state.library = []
+def add_book(title, author, Publication_year, genre, read_status):
     
-    book = {  
+    book = {  # ✅ Correct 4-space indentation
         'title': title,
         'author': author,
         'year': Publication_year,
         'genre': genre,
-        'read': read_bool
+        'read_status': read_status
     }
     st.session_state.library.append(book)
     save_library()
@@ -346,13 +343,11 @@ with col2:
          read_bool = read_status = 'Read'
 
          submit_button = st.form_submit_button(label='Add book')
-
-
          if submit_button and title and author:
              add_book(title,author,Publication_year,genre,read_bool)
 
 if st.session_state.book_added:
-     st.markdown("<div class='success-message'>Book added succesfully</div>")
+     st.markdown("<div class='success-manage'>Book added succesfully</div>")
      st.balloons()
      st.session_state.book_added = False
 
@@ -379,7 +374,6 @@ else:
 
 
    col1 , col2 = st.columns(2)
-
    with col1:
       if st.button(f"Remove" ,  key=f"Remove_{i}" , use_container_width=True):
           if remove_book(i):
@@ -394,13 +388,11 @@ else:
         save_library()
         st.rerun()
 
-
-if "remove_book" not in st.session_state:
-    st.session_state.remove_book = False  # or appropriate default.
-    st.session_state.remove_book
+if st.session_state.remove_book:
+    st.markdown("<h4 class='sub-header'>Book removed</h4>",unsafe_allow_html=True)    
+    st.session_state.remove_book == False  # or appropriate default.
 elif st.session_state.current_view == 'search':
    st.markdown("<h4 class='sub-header'>Search Book</h4>",unsafe_allow_html=True)    
- 
 
 
 search_by = st.selectbox("search_by:" , ['Title' , 'Author' , 'Genre'])
